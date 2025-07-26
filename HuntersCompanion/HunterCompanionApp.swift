@@ -1,15 +1,28 @@
 // HunterCompanionApp.swift
 import SwiftUI
+import SwiftData
 
 @main
 struct HunterCompanionApp: App {
     @StateObject private var settingsManager = SettingsManager()
+    let modelContainer: ModelContainer
+
+    init() {
+        do {
+            modelContainer = try ModelContainer(for: AnimalEntity.self)
+            let context = ModelContext(modelContainer)
+            ContentService.preloadAnimals(context: context)
+        } catch {
+            fatalError("Failed to create model container: \(error)")
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(settingsManager)
                 .environment(\.locale, .init(identifier: settingsManager.currentLanguage.rawValue))
+                .modelContainer(modelContainer)
         }
     }
 }

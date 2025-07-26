@@ -1,6 +1,7 @@
 // OtherViews.swift
 import SwiftUI
 import AuthenticationServices
+import SwiftData
 
 // MARK: - Trails View
 struct TrailsView: View {
@@ -379,7 +380,8 @@ struct PracticeDetailView: View {
 // MARK: - Animals Guide View
 struct AnimalsGuideView: View {
     @EnvironmentObject var settingsManager: SettingsManager
-    @State private var selectedAnimal: Animal?
+    @Query(sort: \AnimalEntity.name) private var animals: [AnimalEntity]
+    @State private var selectedAnimal: AnimalEntity?
     
     var body: some View {
         NavigationStack {
@@ -408,7 +410,7 @@ struct AnimalsGuideView: View {
                 // Animals list
                 ScrollView {
                     LazyVStack(spacing: 16) {
-                        ForEach(Animal.mockAnimals) { animal in
+                        ForEach(animals) { animal in
                             AnimalGuideCard(animal: animal) {
                                 selectedAnimal = animal
                             }
@@ -426,7 +428,7 @@ struct AnimalsGuideView: View {
 }
 
 struct AnimalGuideCard: View {
-    let animal: Animal
+    let animal: AnimalEntity
     let action: () -> Void
     
     var body: some View {
@@ -448,7 +450,7 @@ struct AnimalGuideCard: View {
                         .italic()
                         .foregroundColor(.secondary)
                     
-                    Text(LocalizedStringKey(animal.description))
+                    Text(LocalizedStringKey(animal.details))
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .lineLimit(2)
@@ -467,7 +469,7 @@ struct AnimalGuideCard: View {
 }
 
 struct AnimalDetailView: View {
-    let animal: Animal
+    let animal: AnimalEntity
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -495,7 +497,7 @@ struct AnimalDetailView: View {
                             .font(.headline)
                             .fontWeight(.bold)
                         
-                        Text(LocalizedStringKey(animal.description))
+                        Text(LocalizedStringKey(animal.details))
                             .font(.body)
                     }
                     .padding()

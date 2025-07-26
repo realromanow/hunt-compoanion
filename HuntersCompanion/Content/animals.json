@@ -1,0 +1,24 @@
+[
+  {
+    "name": "White-tailed Deer",
+    "scientificName": "Odocoileus virginianus",
+    "icon": "🦌",
+    "description": "The white-tailed deer is common in North America.",
+    "habitat": "Deciduous forests",
+    "bestSeasons": ["autumn", "early_winter"],
+    "recommendedBaits": ["Acorn Scent", "Apple Scent"],
+    "difficulty": "intermediate",
+    "facts": ["Deer are most active at dawn and dusk."]
+  },
+  {
+    "name": "Wild Boar",
+    "scientificName": "Sus scrofa",
+    "icon": "🐗",
+    "description": "Wild boars are strong and can be aggressive.",
+    "habitat": "Dense forests",
+    "bestSeasons": ["autumn", "winter"],
+    "recommendedBaits": ["Corn Bait"],
+    "difficulty": "expert",
+    "facts": ["Boars have excellent sense of smell."]
+  }
+]
