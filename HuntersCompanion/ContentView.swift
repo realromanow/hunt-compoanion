@@ -4,7 +4,8 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @State private var selectedTab = 0
-    
+    @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "has_seen_onboarding")
+
     var body: some View {
         TabView(selection: $selectedTab) {
             SeasonsView()
@@ -43,6 +44,12 @@ struct ContentView: View {
                 .tag(4)
         }
         .accentColor(settingsManager.selectedTheme.primaryColor)
+        .dynamicTypeSize(settingsManager.largeTextEnabled ? .accessibility3 : .large)
+        .accessibilityContrast(settingsManager.highContrastEnabled ? .increased : .normal)
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView(show: $showOnboarding)
+                .environmentObject(settingsManager)
+        }
     }
 }
 
