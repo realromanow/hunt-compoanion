@@ -4,18 +4,19 @@ import SwiftUI
 @main
 struct HunterCompanionApp: App {
     @StateObject private var settingsManager = SettingsManager()
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(settingsManager)
+                .environment(\.locale, .init(identifier: settingsManager.currentLanguage.rawValue))
         }
     }
 }
 
 // MARK: - Settings Manager
 class SettingsManager: ObservableObject {
-    @Published var currentLanguage: String = "en"
+    @Published var currentLanguage: AppLanguage = .en
     @Published var selectedTheme: AppTheme = .nature
     
     init() {
@@ -23,7 +24,12 @@ class SettingsManager: ObservableObject {
     }
     
     private func loadSettings() {
-        currentLanguage = UserDefaults.standard.string(forKey: "app_language") ?? "en"
+        if let langRaw = UserDefaults.standard.string(forKey: "app_language"),
+           let lang = AppLanguage(rawValue: langRaw) {
+            currentLanguage = lang
+        } else {
+            currentLanguage = .en
+        }
         if let themeRaw = UserDefaults.standard.string(forKey: "app_theme"),
            let theme = AppTheme(rawValue: themeRaw) {
             selectedTheme = theme
@@ -31,8 +37,20 @@ class SettingsManager: ObservableObject {
     }
     
     func saveSettings() {
-        UserDefaults.standard.set(currentLanguage, forKey: "app_language")
+        UserDefaults.standard.set(currentLanguage.rawValue, forKey: "app_language")
         UserDefaults.standard.set(selectedTheme.rawValue, forKey: "app_theme")
+    }
+}
+
+enum AppLanguage: String, CaseIterable {
+    case en
+    case es
+
+    var localizedName: LocalizedStringKey {
+        switch self {
+        case .en: return "language_en"
+        case .es: return "language_es"
+        }
     }
 }
 
