@@ -411,3 +411,5 @@
 "theme_winter" = "Invierno";
 
 "select_language" = "Seleccionar Idioma";
+"language_en" = "Inglés";
+"language_es" = "Español";

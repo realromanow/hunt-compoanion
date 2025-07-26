@@ -733,6 +733,14 @@ struct SettingsView: View {
                         }
                     }
                 }
+
+                Section("language_settings") {
+                    Picker("app_language", selection: $settingsManager.currentLanguage) {
+                        ForEach(AppLanguage.allCases, id: \.self) { language in
+                            Text(language.localizedName).tag(language)
+                        }
+                    }
+                }
                 
                 Section("about_app") {
                     HStack {
