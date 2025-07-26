@@ -66,6 +66,9 @@ struct TrailsView: View {
     }
 }
 
+
+
+
 // MARK: - Trails Manager
 class TrailsManager: ObservableObject {
     @Published var completedPracticeIds: Set<UUID> = []
@@ -690,6 +693,7 @@ struct BaitDetailView: View {
             }
         }
     }
+}
 }
 
 // MARK: - Profile View

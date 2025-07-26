@@ -45,7 +45,7 @@ struct ContentView: View {
         }
         .accentColor(settingsManager.selectedTheme.primaryColor)
         .dynamicTypeSize(settingsManager.largeTextEnabled ? .accessibility3 : .large)
-        .accessibilityContrast(settingsManager.highContrastEnabled ? .increased : .normal)
+        .accessibilityContrastCompat(settingsManager.highContrastEnabled ? AccessibilityContrast.increased : .normal)
         .sheet(isPresented: $showOnboarding) {
             OnboardingView(show: $showOnboarding)
                 .environmentObject(settingsManager)
