@@ -44,7 +44,7 @@ struct SeasonsView: View {
                 // Activity Circle
                 VStack(spacing: 24) {
                     ActivityCircleView(animal: selectedAnimal)
-                        .frame(height: 300)
+                        .frame(height: 400) // Увеличили с 300 до 400
                     
                     // Animal Info Card
                     AnimalInfoCard(animal: selectedAnimal)
@@ -103,6 +103,7 @@ struct ActivityCircleView: View {
             }
             .frame(width: 140)
         }
+        .frame(width: 400, height: 400) // Увеличили размер контейнера с 300 до 400
         .onAppear {
             withAnimation(.easeInOut(duration: 2).repeatForever()) {
                 animationProgress = 1
@@ -135,19 +136,29 @@ struct ActivitySegment: View {
                 .rotationEffect(.degrees(-90))
                 .scaleEffect(0.95 + sin(progress * 2 * .pi + Double(index)) * 0.05)
             
-            // Period label
-            VStack {
+            // Period label - размещаем дальше от кольца
+            VStack(spacing: 2) {
                 Text(LocalizedStringKey(period))
                     .font(.caption)
-                    .fontWeight(.medium)
+                    .fontWeight(.semibold)
                 
                 Text(level.localizedName)
                     .font(.caption2)
+                    .fontWeight(.medium)
                     .foregroundColor(level.color)
             }
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .background(
+                // Добавляем полупрозрачный фон для лучшей читаемости
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(.ultraThinMaterial)
+                    .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
+            )
             .offset(
-                x: cos(startAngle.radians + .pi/4) * 150,
-                y: sin(startAngle.radians + .pi/4) * 150
+                // Увеличиваем расстояние с 150 до 180, чтобы текст не накладывался на кольцо
+                x: cos(startAngle.radians + .pi/4) * 180,
+                y: sin(startAngle.radians + .pi/4) * 180
             )
         }
     }
