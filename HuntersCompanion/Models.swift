@@ -1,29 +1,46 @@
 // Models.swift (ИСПРАВЛЕННАЯ ВЕРСИЯ)
 import SwiftUI
+import SwiftData
 
 // MARK: - Animal Model
-struct Animal: Identifiable, Hashable {
-    let id = UUID()
-    let name: String // Изменено с LocalizedStringKey на String
-    let scientificName: String
-    let icon: String
-    let description: String // Изменено с LocalizedStringKey на String
-    let habitat: String // Изменено с LocalizedStringKey на String
-    let bestSeasons: [Season]
-    let activityPattern: ActivityPattern
-    let recommendedBaits: [String]
-    let difficulty: DifficultyLevel
-    let facts: [String] // Изменено с LocalizedStringKey на String
-    
-    // Equatable implementation
-    static func == (lhs: Animal, rhs: Animal) -> Bool {
-        return lhs.id == rhs.id
+@Model
+final class Animal: Identifiable, Hashable {
+    @Attribute(.unique) var id: UUID
+    var name: String // Изменено с LocalizedStringKey на String
+    var scientificName: String
+    var icon: String
+    var description: String // Изменено с LocalizedStringKey на String
+    var habitat: String // Изменено с LocalizedStringKey на String
+    var bestSeasons: [Season]
+    var activityPattern: ActivityPattern
+    var recommendedBaits: [String]
+    var difficulty: DifficultyLevel
+    var facts: [String] // Изменено с LocalizedStringKey на String
+
+    init(id: UUID = UUID(),
+         name: String,
+         scientificName: String,
+         icon: String,
+         description: String,
+         habitat: String,
+         bestSeasons: [Season],
+         activityPattern: ActivityPattern,
+         recommendedBaits: [String],
+         difficulty: DifficultyLevel,
+         facts: [String]) {
+        self.id = id
+        self.name = name
+        self.scientificName = scientificName
+        self.icon = icon
+        self.description = description
+        self.habitat = habitat
+        self.bestSeasons = bestSeasons
+        self.activityPattern = activityPattern
+        self.recommendedBaits = recommendedBaits
+        self.difficulty = difficulty
+        self.facts = facts
     }
     
-    // Hashable implementation
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
     
     static let mockAnimals: [Animal] = [
         Animal(
@@ -205,16 +222,37 @@ enum DifficultyLevel: String, CaseIterable, Hashable {
 }
 
 // MARK: - Practice Model
-struct HuntingPractice: Identifiable {
-    let id = UUID()
-    let name: String // Изменено с LocalizedStringKey на String
-    let description: String // Изменено с LocalizedStringKey на String
-    let icon: String
-    let category: PracticeCategory
-    let duration: TimeInterval // in seconds
-    let difficulty: DifficultyLevel
-    let instructions: [String] // Изменено с LocalizedStringKey на String
-    let tips: [String] // Изменено с LocalizedStringKey на String
+@Model
+final class HuntingPractice: Identifiable {
+    @Attribute(.unique) var id: UUID
+    var name: String // Изменено с LocalizedStringKey на String
+    var description: String // Изменено с LocalizedStringKey на String
+    var icon: String
+    var category: PracticeCategory
+    var duration: TimeInterval // in seconds
+    var difficulty: DifficultyLevel
+    var instructions: [String] // Изменено с LocalizedStringKey на String
+    var tips: [String] // Изменено с LocalizedStringKey на String
+
+    init(id: UUID = UUID(),
+         name: String,
+         description: String,
+         icon: String,
+         category: PracticeCategory,
+         duration: TimeInterval,
+         difficulty: DifficultyLevel,
+         instructions: [String],
+         tips: [String]) {
+        self.id = id
+        self.name = name
+        self.description = description
+        self.icon = icon
+        self.category = category
+        self.duration = duration
+        self.difficulty = difficulty
+        self.instructions = instructions
+        self.tips = tips
+    }
     
     static let allPractices: [HuntingPractice] = [
         HuntingPractice(
@@ -302,15 +340,34 @@ enum PracticeCategory: String, CaseIterable {
 }
 
 // MARK: - Bait Model
-struct Bait: Identifiable {
-    let id = UUID()
-    let name: String
-    let icon: String
-    let description: String
-    let category: BaitCategory
-    let effectiveness: Int // 1-4 stars
-    let ingredients: [String]
-    let steps: [String]
+@Model
+final class Bait: Identifiable {
+    @Attribute(.unique) var id: UUID
+    var name: String
+    var icon: String
+    var description: String
+    var category: BaitCategory
+    var effectiveness: Int // 1-4 stars
+    var ingredients: [String]
+    var steps: [String]
+
+    init(id: UUID = UUID(),
+         name: String,
+         icon: String,
+         description: String,
+         category: BaitCategory,
+         effectiveness: Int,
+         ingredients: [String],
+         steps: [String]) {
+        self.id = id
+        self.name = name
+        self.icon = icon
+        self.description = description
+        self.category = category
+        self.effectiveness = effectiveness
+        self.ingredients = ingredients
+        self.steps = steps
+    }
 
     static let allBaits: [Bait] = [
         Bait(

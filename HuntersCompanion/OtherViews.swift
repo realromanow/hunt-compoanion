@@ -1,6 +1,7 @@
 // OtherViews.swift
 import SwiftUI
 import AuthenticationServices
+import SwiftData
 
 // MARK: - Trails View
 struct TrailsView: View {
@@ -69,8 +70,10 @@ struct TrailsView: View {
 // MARK: - Trails Manager
 class TrailsManager: ObservableObject {
     @Published var completedPracticeIds: Set<UUID> = []
-    
+
     let allPractices: [HuntingPractice] = HuntingPractice.allPractices
+    private let context = ModelContext(PersistenceController.shared)
+    private var progressEntity: UserProgressEntity?
     
     var completedPractices: Int {
         completedPracticeIds.count
@@ -100,16 +103,21 @@ class TrailsManager: ObservableObject {
     }
     
     private func loadProgress() {
-        if let data = UserDefaults.standard.data(forKey: "completed_practices"),
-           let ids = try? JSONDecoder().decode(Set<UUID>.self, from: data) {
-            completedPracticeIds = ids
+        let descriptor = FetchDescriptor<UserProgressEntity>()
+        if let entity = try? context.fetch(descriptor).first {
+            progressEntity = entity
+            completedPracticeIds = Set(entity.completedPracticeIds)
+        } else {
+            let entity = UserProgressEntity()
+            context.insert(entity)
+            progressEntity = entity
+            try? context.save()
         }
     }
-    
+
     private func saveProgress() {
-        if let data = try? JSONEncoder().encode(completedPracticeIds) {
-            UserDefaults.standard.set(data, forKey: "completed_practices")
-        }
+        progressEntity?.completedPracticeIds = Array(completedPracticeIds)
+        try? context.save()
     }
 }
 
@@ -379,6 +387,7 @@ struct PracticeDetailView: View {
 // MARK: - Animals Guide View
 struct AnimalsGuideView: View {
     @EnvironmentObject var settingsManager: SettingsManager
+    @EnvironmentObject var animalsVM: AnimalsViewModel
     @State private var selectedAnimal: Animal?
     
     var body: some View {
@@ -408,7 +417,7 @@ struct AnimalsGuideView: View {
                 // Animals list
                 ScrollView {
                     LazyVStack(spacing: 16) {
-                        ForEach(Animal.mockAnimals) { animal in
+                        ForEach(animalsVM.animals) { animal in
                             AnimalGuideCard(animal: animal) {
                                 selectedAnimal = animal
                             }
@@ -537,6 +546,7 @@ struct AnimalDetailView: View {
 // MARK: - Bait Workshop View
 struct BaitWorkshopView: View {
     @EnvironmentObject var settingsManager: SettingsManager
+    @EnvironmentObject var baitsVM: BaitsViewModel
     @State private var selectedBait: Bait?
     
     var body: some View {
@@ -564,7 +574,7 @@ struct BaitWorkshopView: View {
                 
                 ScrollView {
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 16) {
-                        ForEach(Bait.allBaits) { bait in
+                        ForEach(baitsVM.baits) { bait in
                             BaitCard(bait: bait) {
                                 selectedBait = bait
                             }

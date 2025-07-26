@@ -1,15 +1,27 @@
 // HunterCompanionApp.swift
 import SwiftUI
+import SwiftData
 
 @main
 struct HunterCompanionApp: App {
     @StateObject private var settingsManager = SettingsManager()
+    @StateObject private var animalsVM = AnimalsViewModel()
+    @StateObject private var baitsVM = BaitsViewModel()
+    @StateObject private var progressVM = ProgressViewModel()
+    @StateObject private var locationsVM = LocationsViewModel()
+    @StateObject private var achievementsVM = AchievementsViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(settingsManager)
+                .environmentObject(animalsVM)
+                .environmentObject(baitsVM)
+                .environmentObject(progressVM)
+                .environmentObject(locationsVM)
+                .environmentObject(achievementsVM)
                 .environment(\.locale, .init(identifier: settingsManager.currentLanguage.rawValue))
+                .modelContainer(PersistenceController.shared)
         }
     }
 }
@@ -20,31 +32,39 @@ class SettingsManager: ObservableObject {
     @Published var selectedTheme: AppTheme = .nature
     @Published var largeTextEnabled: Bool = false
     @Published var highContrastEnabled: Bool = false
+    @Published var hasSeenOnboarding: Bool = false
+
+    private let context = ModelContext(PersistenceController.shared)
+    private var entity: SettingsEntity?
     
     init() {
         loadSettings()
     }
     
     private func loadSettings() {
-        if let langRaw = UserDefaults.standard.string(forKey: "app_language"),
-           let lang = AppLanguage(rawValue: langRaw) {
-            currentLanguage = lang
+        let descriptor = FetchDescriptor<SettingsEntity>()
+        if let item = try? context.fetch(descriptor).first {
+            entity = item
+            currentLanguage = AppLanguage(rawValue: item.language) ?? .en
+            selectedTheme = AppTheme(rawValue: item.theme) ?? .nature
+            largeTextEnabled = item.largeText
+            highContrastEnabled = item.highContrast
+            hasSeenOnboarding = item.hasSeenOnboarding
         } else {
-            currentLanguage = .en
+            let item = SettingsEntity()
+            context.insert(item)
+            entity = item
+            try? context.save()
         }
-        if let themeRaw = UserDefaults.standard.string(forKey: "app_theme"),
-           let theme = AppTheme(rawValue: themeRaw) {
-            selectedTheme = theme
-        }
-        largeTextEnabled = UserDefaults.standard.bool(forKey: "large_text")
-        highContrastEnabled = UserDefaults.standard.bool(forKey: "high_contrast")
     }
     
     func saveSettings() {
-        UserDefaults.standard.set(currentLanguage.rawValue, forKey: "app_language")
-        UserDefaults.standard.set(selectedTheme.rawValue, forKey: "app_theme")
-        UserDefaults.standard.set(largeTextEnabled, forKey: "large_text")
-        UserDefaults.standard.set(highContrastEnabled, forKey: "high_contrast")
+        entity?.language = currentLanguage.rawValue
+        entity?.theme = selectedTheme.rawValue
+        entity?.largeText = largeTextEnabled
+        entity?.highContrast = highContrastEnabled
+        entity?.hasSeenOnboarding = hasSeenOnboarding
+        try? context.save()
     }
 }
 

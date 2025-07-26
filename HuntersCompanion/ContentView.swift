@@ -5,7 +5,7 @@ struct ContentView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @Environment(\.colorSchemeContrast) var systemContrast
     @State private var selectedTab = 0
-    @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "has_seen_onboarding")
+    @State private var showOnboarding = false
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -49,6 +49,9 @@ struct ContentView: View {
         .sheet(isPresented: $showOnboarding) {
             OnboardingView(show: $showOnboarding)
                 .environmentObject(settingsManager)
+        }
+        .onAppear {
+            showOnboarding = !settingsManager.hasSeenOnboarding
         }
     }
 }

@@ -1,9 +1,11 @@
 // SeasonsView.swift
 import SwiftUI
+import SwiftData
 
 struct SeasonsView: View {
     @EnvironmentObject var settingsManager: SettingsManager
-    @State private var selectedAnimal = Animal.mockAnimals[0]
+    @EnvironmentObject var animalsVM: AnimalsViewModel
+    @State private var selectedAnimal = Animal.mockAnimals.first!
     @State private var showingAnimalSelection = false
     
     var body: some View {
@@ -57,6 +59,11 @@ struct SeasonsView: View {
             .background(settingsManager.selectedTheme.backgroundGradient)
             .sheet(isPresented: $showingAnimalSelection) {
                 AnimalSelectionSheet(selectedAnimal: $selectedAnimal)
+            }
+            .onAppear {
+                if let first = animalsVM.animals.first {
+                    selectedAnimal = first
+                }
             }
         }
     }
@@ -258,11 +265,12 @@ struct DifficultyBadge: View {
 struct AnimalSelectionSheet: View {
     @Binding var selectedAnimal: Animal
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject var animalsVM: AnimalsViewModel
     
     var body: some View {
         NavigationStack {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2), spacing: 16) {
-                ForEach(Animal.mockAnimals) { animal in
+                ForEach(animalsVM.animals) { animal in
                     AnimalSelectionCard(
                         animal: animal,
                         isSelected: animal.id == selectedAnimal.id
