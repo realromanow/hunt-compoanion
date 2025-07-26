@@ -1,0 +1,413 @@
+/*
+   Localizable.strings (English)
+   HunterCompanion
+   
+   Place this file in: en.lproj/Localizable.strings
+*/
+
+// MARK: - Tab Bar
+"seasons_tab" = "Seasons";
+"trails_tab" = "Trails";
+"guide_tab" = "Guide";
+"workshop_tab" = "Workshop";
+"profile_tab" = "Profile";
+
+// MARK: - General
+"done" = "Done";
+"close" = "Close";
+"save" = "Save";
+"cancel" = "Cancel";
+"all_categories" = "All";
+
+// MARK: - Seasons View
+"hunting_seasons" = "Hunting Seasons";
+"current_season_activity" = "Current Season Activity";
+"select_animal" = "Select Animal";
+"best_seasons" = "Best Seasons";
+"best_hunting_seasons" = "Best Hunting Seasons";
+"daily_activity" = "Daily Activity";
+
+// MARK: - Animals
+"white_tailed_deer" = "White-tailed Deer";
+"white_tailed_deer_description" = "Graceful herbivore found in deciduous forests. Most active during dawn and dusk, feeding on leaves, shoots, and acorns.";
+
+"wild_boar" = "Wild Boar";
+"wild_boar_description" = "Powerful omnivore with excellent sense of smell. Prefers dense forest cover and can be aggressive when threatened.";
+
+"wild_turkey" = "Wild Turkey";
+"wild_turkey_description" = "Large ground bird with keen eyesight and excellent hearing. Often found in open woodlands and forest edges.";
+
+"black_bear" = "Black Bear";
+"black_bear_description" = "Large omnivore requiring expert hunting skills. Most active before hibernation, searching for high-calorie foods.";
+
+// MARK: - Habitats
+"deciduous_forests" = "Deciduous Forests";
+"dense_forests" = "Dense Forests";
+"open_woodlands" = "Open Woodlands";
+"mountain_forests" = "Mountain Forests";
+
+// MARK: - Seasons
+"season_spring" = "Spring";
+"season_summer" = "Summer";
+"season_autumn" = "Autumn";
+"season_winter" = "Winter";
+"season_early_winter" = "Early Winter";
+"season_late_summer" = "Late Summer";
+
+// MARK: - Activity Levels
+"activity_low" = "Low";
+"activity_medium" = "Medium";
+"activity_high" = "High";
+
+// MARK: - Time Periods
+"dawn" = "Dawn";
+"morning" = "Morning";
+"noon" = "Noon";
+"evening" = "Evening";
+
+// MARK: - Difficulty
+"difficulty_beginner" = "Beginner";
+"difficulty_intermediate" = "Intermediate";
+"difficulty_expert" = "Expert";
+"difficulty_label" = "Difficulty";
+
+// MARK: - Labels
+"habitat_label" = "Habitat";
+"description_label" = "Description";
+"recommended_baits" = "Recommended Baits";
+"interesting_facts" = "Interesting Facts";
+"effectiveness_label" = "Effectiveness";
+"category_label" = "Category";
+"duration_label" = "Duration";
+"progress_label" = "Progress";
+
+// MARK: - Animal Facts
+"deer_fact_1" = "White-tailed deer can run up to 30 mph and jump 8 feet high";
+"deer_fact_2" = "They have excellent hearing and can detect sounds from great distances";
+"deer_fact_3" = "During winter, they form groups called 'yards' for better survival";
+
+"boar_fact_1" = "Wild boars have an excellent sense of smell, 7 times better than dogs";
+"boar_fact_2" = "They are excellent swimmers and can swim long distances";
+"boar_fact_3" = "Wild boars are highly intelligent and social animals with complex hierarchies";
+
+"turkey_fact_1" = "Wild turkeys can fly at speeds up to 55 mph for short distances";
+"turkey_fact_2" = "They have excellent color vision and can see movement from great distances";
+"turkey_fact_3" = "Males perform elaborate courtship displays called 'strutting' during mating season";
+
+"bear_fact_1" = "Black bears have excellent memories and can remember food sources for years";
+"bear_fact_2" = "They can run up to 35 mph despite their size and weight";
+"bear_fact_3" = "Bears have one of the best senses of smell in the animal kingdom, 7 times better than bloodhounds";
+
+// MARK: - Trails View
+"hunter_trails" = "Hunter Trails";
+"complete_practices" = "Complete training practices to unlock new trails";
+"practice_detail" = "Practice Details";
+"instructions_label" = "Instructions";
+"tips_label" = "Tips";
+"mark_completed" = "Mark as Completed";
+
+// MARK: - Practice Names
+"practice_breathing" = "Breathing Control";
+"practice_breathing_desc" = "Master controlled breathing for steady aim and reduced noise";
+
+"practice_silent_walking" = "Silent Movement";
+"practice_silent_walking_desc" = "Learn to move through terrain without alerting wildlife";
+
+"practice_camouflage" = "Camouflage Techniques";
+"practice_camouflage_desc" = "Perfect the art of blending with your environment";
+
+"practice_wind_reading" = "Wind Reading";
+"practice_wind_reading_desc" = "Understand wind patterns and their effect on hunting";
+
+"practice_tracking" = "Basic Tracking";
+"practice_tracking_desc" = "Learn to identify and follow animal tracks and signs";
+
+"practice_patience" = "Patience Training";
+"practice_patience_desc" = "Develop the mental discipline required for successful hunting";
+
+"practice_equipment_check" = "Equipment Check";
+"practice_equipment_check_desc" = "Learn systematic equipment inspection and maintenance";
+
+"practice_shooting_stance" = "Shooting Stance";
+"practice_shooting_stance_desc" = "Perfect your shooting stance for accuracy and stability";
+
+"practice_weather_reading" = "Weather Reading";
+"practice_weather_reading_desc" = "Understand how weather affects animal behavior";
+
+"practice_advanced_tracking" = "Advanced Tracking";
+"practice_advanced_tracking_desc" = "Master complex tracking techniques and animal behavior patterns";
+
+// MARK: - Practice Categories
+"category_stealth" = "Stealth";
+"category_tracking" = "Tracking";
+"category_shooting" = "Shooting";
+"category_environment" = "Environment";
+"category_equipment" = "Equipment";
+"category_mental" = "Mental";
+
+// MARK: - Practice Instructions
+"breathing_instruction_1" = "Sit comfortably with your back straight and feet flat on the ground";
+"breathing_instruction_2" = "Breathe in slowly through your nose for 4 counts, hold for 4 counts";
+"breathing_instruction_3" = "Exhale slowly through your mouth for 6 counts, repeat the cycle";
+
+"breathing_tip_1" = "Practice this technique before every hunting session to center yourself";
+"breathing_tip_2" = "Focus on your breathing to stay calm and centered during tense moments";
+
+"walking_instruction_1" = "Step heel-to-toe with each footfall, rolling your foot down slowly";
+"walking_instruction_2" = "Test each step before putting full weight down to avoid noise";
+"walking_instruction_3" = "Move slowly and deliberately, pausing between steps to listen";
+
+"walking_tip_1" = "Practice on different terrain types to understand each surface";
+"walking_tip_2" = "Avoid stepping on dry leaves, twigs, and other noisy ground cover";
+
+"camouflage_instruction_1" = "Study your environment and identify dominant colors and patterns";
+"camouflage_instruction_2" = "Break up your human silhouette with natural materials";
+"camouflage_instruction_3" = "Move slowly and avoid sudden movements that catch the eye";
+
+"camouflage_tip_1" = "Natural materials work better than artificial camouflage";
+"camouflage_tip_2" = "Pay attention to shadows and how they affect your visibility";
+
+"wind_instruction_1" = "Use powder or light debris to test wind direction";
+"wind_instruction_2" = "Position yourself downwind from your target area";
+"wind_instruction_3" = "Monitor wind changes throughout your hunting session";
+
+"wind_tip_1" = "Wind patterns change throughout the day, check regularly";
+"wind_tip_2" = "Use thermals and valley winds to your advantage";
+
+"tracking_instruction_1" = "Look for tracks, scat, feeding signs, and bedding areas";
+"tracking_instruction_2" = "Note the age of signs by their freshness and condition";
+"tracking_instruction_3" = "Follow trail direction and predict animal movement patterns";
+
+"tracking_tip_1" = "Early morning provides the best tracking conditions";
+"tracking_tip_2" = "Look for broken vegetation and disturbed ground";
+
+"patience_instruction_1" = "Find a comfortable position and settle in quietly";
+"patience_instruction_2" = "Focus on your breathing and stay mentally alert";
+"patience_instruction_3" = "Observe your surroundings and wait for the right moment";
+
+"patience_tip_1" = "Successful hunting requires hours of patient waiting";
+"patience_tip_2" = "Use waiting time to study animal behavior patterns";
+
+"equipment_instruction_1" = "Check all equipment before leaving for your hunt";
+"equipment_instruction_2" = "Ensure weapons are clean, functional, and properly sighted";
+"equipment_instruction_3" = "Verify you have all necessary licenses and tags";
+
+"equipment_tip_1" = "A equipment checklist prevents forgotten essentials";
+"equipment_tip_2" = "Clean and maintain equipment after each use";
+
+"stance_instruction_1" = "Position feet shoulder-width apart for stable base";
+"stance_instruction_2" = "Lean slightly forward with weight evenly distributed";
+"stance_instruction_3" = "Keep your shooting elbow positioned for consistent aim";
+
+"stance_tip_1" = "Practice your stance until it becomes muscle memory";
+"stance_tip_2" = "Adjust stance based on terrain and shooting position";
+
+"weather_instruction_1" = "Check barometric pressure and temperature trends";
+"weather_instruction_2" = "Observe cloud patterns and wind direction changes";
+"weather_instruction_3" = "Understand how weather affects animal movement";
+
+"weather_tip_1" = "Animals are more active before weather fronts";
+"weather_tip_2" = "Rainy weather can mask your scent and sound";
+
+"advanced_tracking_instruction_1" = "Study individual animal gait patterns and characteristics";
+"advanced_tracking_instruction_2" = "Age tracks by substrate conditions and weathering";
+"advanced_tracking_instruction_3" = "Predict destination based on terrain and resources";
+
+"advanced_tracking_tip_1" = "Each animal has unique movement patterns";
+"advanced_tracking_tip_2" = "Combine tracking with knowledge of animal behavior";
+
+// MARK: - Animals Guide
+"animals_guide" = "Animals Guide";
+"learn_about_animals" = "Learn about animals and their behavior";
+"animal_details" = "Animal Details";
+
+// MARK: - Bait Workshop
+"bait_workshop" = "Bait Workshop";
+"craft_perfect_baits" = "Craft the perfect baits for your hunts";
+"search_baits" = "Search baits...";
+"recipe_label" = "Recipe";
+"ingredients_label" = "Ingredients";
+"steps_label" = "Steps";
+"duration_estimate" = "Est. Time:";
+"seasonal_bonus" = "Seasonal Bonus";
+"bait_recipe" = "Bait Recipe";
+
+// MARK: - Bait Categories
+"category_scent" = "Scent";
+"category_food" = "Food";
+"category_protein" = "Protein";
+
+// MARK: - Effectiveness
+"effectiveness_poor" = "Poor";
+"effectiveness_fair" = "Fair";
+"effectiveness_good" = "Good";
+"effectiveness_excellent" = "Excellent";
+
+// MARK: - Baits
+"acorn_scent" = "Acorn Scent";
+"acorn_scent_description" = "Natural deer attractant using fresh acorns and vanilla essence";
+
+"apple_scent" = "Apple Scent";
+"apple_scent_description" = "Sweet fruit scent effective for various game animals";
+
+"corn_bait" = "Corn Bait";
+"corn_bait_description" = "High-energy food bait perfect for deer and wild boar";
+
+"root_scent" = "Root Scent";
+"root_scent_description" = "Earthy scent that attracts foraging animals like boar";
+
+"fruit_mix" = "Fruit Mix";
+"fruit_mix_description" = "Mixed fruit bait effective for omnivorous game";
+
+"seed_mix" = "Seed Mix";
+"seed_mix_description" = "Nutritious seed blend attractive to birds and small game";
+
+"berry_scent" = "Berry Scent";
+"berry_scent_description" = "Sweet berry scent irresistible to many forest animals";
+
+"insect_lure" = "Insect Lure";
+"insect_lure_description" = "Protein-rich lure effective for birds and small game";
+
+"honey_scent" = "Honey Scent";
+"honey_scent_description" = "Sweet honey scent effective for bears and other omnivores";
+
+"fish_lure" = "Fish Lure";
+"fish_lure_description" = "Fishy scent that attracts bears and other predators";
+
+"berries_mix" = "Berries Mix";
+"berries_mix_description" = "Fresh berry mix perfect for attracting omnivorous animals";
+
+// MARK: - Ingredients
+"fresh_acorns" = "Fresh Acorns";
+"vanilla_extract" = "Vanilla Extract";
+"mineral_oil" = "Mineral Oil";
+"fresh_apples" = "Fresh Apples";
+"apple_extract" = "Apple Extract";
+"carrier_oil" = "Carrier Oil";
+"whole_corn" = "Whole Corn";
+"molasses" = "Molasses";
+"salt" = "Salt";
+"wild_tubers" = "Wild Tubers";
+"earth_scent" = "Earth Scent";
+"fixative" = "Fixative";
+"mixed_berries" = "Mixed Berries";
+"fruit_juice" = "Fruit Juice";
+"preservative" = "Preservative";
+"sunflower_seeds" = "Sunflower Seeds";
+"millet" = "Millet";
+"cracked_corn" = "Cracked Corn";
+"wild_berries" = "Wild Berries";
+"berry_extract" = "Berry Extract";
+"alcohol_base" = "Alcohol Base";
+"dried_crickets" = "Dried Crickets";
+"protein_powder" = "Protein Powder";
+"attractant" = "Attractant";
+"raw_honey" = "Raw Honey";
+"beeswax" = "Beeswax";
+"fish_oil" = "Fish Oil";
+"fish_meal" = "Fish Meal";
+"stabilizer" = "Stabilizer";
+"sugar" = "Sugar";
+"natural_preservative" = "Natural Preservative";
+
+// MARK: - Recipe Steps
+"acorn_recipe_step_1" = "Crush fresh acorns into coarse pieces, removing any shells";
+"acorn_recipe_step_2" = "Mix crushed acorns with vanilla extract and mineral oil";
+"acorn_recipe_step_3" = "Let mixture sit for 2 hours before use to blend scents";
+
+"apple_recipe_step_1" = "Core and chop fresh apples into small pieces";
+"apple_recipe_step_2" = "Mix with apple extract and carrier oil";
+"apple_recipe_step_3" = "Allow to ferment slightly for enhanced aroma";
+
+"corn_recipe_step_1" = "Soak whole corn in water for 30 minutes";
+"corn_recipe_step_2" = "Mix with molasses and salt for flavor enhancement";
+"corn_recipe_step_3" = "Spread mixture in hunting area before dawn";
+
+"root_recipe_step_1" = "Clean and chop wild tubers into small pieces";
+"root_recipe_step_2" = "Mix with earth scent base and fixative";
+"root_recipe_step_3" = "Allow mixture to cure for 3 hours for optimal scent";
+
+"fruit_recipe_step_1" = "Mash mixed berries to release natural juices";
+"fruit_recipe_step_2" = "Add fruit juice and natural preservative";
+"fruit_recipe_step_3" = "Mix thoroughly and let stand for 1 hour";
+
+"seed_recipe_step_1" = "Mix sunflower seeds, millet, and cracked corn";
+"seed_recipe_step_2" = "Lightly toast mixture to enhance aroma";
+"seed_recipe_step_3" = "Store in airtight container until use";
+
+"berry_recipe_step_1" = "Crush wild berries to extract maximum scent";
+"berry_recipe_step_2" = "Mix with berry extract and alcohol base";
+"berry_recipe_step_3" = "Let mixture mature for 2 hours before application";
+
+"insect_recipe_step_1" = "Grind dried crickets into fine powder";
+"insect_recipe_step_2" = "Mix with protein powder and attractant";
+"insect_recipe_step_3" = "Form into small balls for easy placement";
+
+"honey_recipe_step_1" = "Warm raw honey to liquid consistency";
+"honey_recipe_step_2" = "Mix with melted beeswax and carrier oil";
+"honey_recipe_step_3" = "Cool mixture until semi-solid before use";
+
+"fish_recipe_step_1" = "Combine fish oil with fish meal";
+"fish_recipe_step_2" = "Add stabilizer to prevent spoilage";
+"fish_recipe_step_3" = "Mix well and apply to hunting area";
+
+"berries_recipe_step_1" = "Select fresh, ripe berries for maximum appeal";
+"berries_recipe_step_2" = "Mix with sugar and natural preservative";
+"berries_recipe_step_3" = "Let mixture ferment for 2 hours for enhanced scent";
+
+// MARK: - Profile
+"hunter_title" = "Hunter";
+"days_active" = "Days Active";
+"practices_completed" = "Practices\nCompleted";
+"achievements" = "Achievements";
+"settings" = "Settings";
+"hunting_log" = "Hunting Log";
+"share_app" = "Share App";
+"app_version" = "Version 1.0.0";
+
+// MARK: - Achievements
+"achievement_first_steps" = "First Steps";
+"achievement_first_steps_desc" = "Welcome to Hunter Companion! Your journey begins now.";
+
+"achievement_dedicated_hunter" = "Dedicated Hunter";
+"achievement_dedicated_hunter_desc" = "Use the app for 7 consecutive days";
+
+"achievement_practice_makes_perfect" = "Practice Makes Perfect";
+"achievement_practice_makes_perfect_desc" = "Complete 5 hunting practices successfully";
+
+"achievement_master_tracker" = "Master Tracker";
+"achievement_master_tracker_desc" = "Complete 10 hunting practices successfully";
+
+"achievement_veteran_hunter" = "Veteran Hunter";
+"achievement_veteran_hunter_desc" = "Use the app for 30 days - true dedication!";
+
+"achievement_bait_master" = "Bait Master";
+"achievement_bait_master_desc" = "Explore the bait workshop for 2 weeks";
+
+// MARK: - Achievement Categories
+"category_beginner" = "Beginner";
+"category_skill" = "Skill";
+"category_dedication" = "Dedication";
+"category_knowledge" = "Knowledge";
+
+"track_your_progress" = "Track your hunting journey and achievements";
+"unlocked_label" = "Unlocked";
+"completed" = "Completed";
+
+// MARK: - Settings
+"profile_settings" = "Profile";
+"appearance_settings" = "Appearance";
+"language_settings" = "Language";
+"about_app" = "About";
+
+"hunter_name" = "Hunter Name";
+"enter_name" = "Enter name";
+"app_theme" = "Theme";
+"app_language" = "Language";
+"developer" = "Developer";
+
+"theme_nature" = "Nature";
+"theme_autumn" = "Autumn";
+"theme_winter" = "Winter";
+
+"select_language" = "Select Language";

@@ -1,0 +1,413 @@
+/*
+   Localizable.strings (Spanish)
+   HunterCompanion
+   
+   Place this file in: es.lproj/Localizable.strings
+*/
+
+// MARK: - Tab Bar
+"seasons_tab" = "Temporadas";
+"trails_tab" = "Senderos";
+"guide_tab" = "Guía";
+"workshop_tab" = "Taller";
+"profile_tab" = "Perfil";
+
+// MARK: - General
+"done" = "Hecho";
+"close" = "Cerrar";
+"save" = "Guardar";
+"cancel" = "Cancelar";
+"all_categories" = "Todas";
+
+// MARK: - Seasons View
+"hunting_seasons" = "Temporadas de Caza";
+"current_season_activity" = "Actividad de Temporada Actual";
+"select_animal" = "Seleccionar Animal";
+"best_seasons" = "Mejores Temporadas";
+"best_hunting_seasons" = "Mejores Temporadas de Caza";
+"daily_activity" = "Actividad Diaria";
+
+// MARK: - Animals
+"white_tailed_deer" = "Venado de Cola Blanca";
+"white_tailed_deer_description" = "Herbívoro grácil encontrado en bosques caducifolios. Más activo durante el amanecer y atardecer, alimentándose de hojas, brotes y bellotas.";
+
+"wild_boar" = "Jabalí";
+"wild_boar_description" = "Omnívoro poderoso con excelente sentido del olfato. Prefiere la cobertura densa del bosque y puede ser agresivo cuando se siente amenazado.";
+
+"wild_turkey" = "Pavo Silvestre";
+"wild_turkey_description" = "Ave terrestre grande con vista aguda y excelente audición. A menudo se encuentra en bosques abiertos y bordes de bosque.";
+
+"black_bear" = "Oso Negro";
+"black_bear_description" = "Omnívoro grande que requiere habilidades expertas de caza. Más activo antes de la hibernación, buscando alimentos altos en calorías.";
+
+// MARK: - Habitats
+"deciduous_forests" = "Bosques Caducifolios";
+"dense_forests" = "Bosques Densos";
+"open_woodlands" = "Bosques Abiertos";
+"mountain_forests" = "Bosques de Montaña";
+
+// MARK: - Seasons
+"season_spring" = "Primavera";
+"season_summer" = "Verano";
+"season_autumn" = "Otoño";
+"season_winter" = "Invierno";
+"season_early_winter" = "Invierno Temprano";
+"season_late_summer" = "Verano Tardío";
+
+// MARK: - Activity Levels
+"activity_low" = "Baja";
+"activity_medium" = "Media";
+"activity_high" = "Alta";
+
+// MARK: - Time Periods
+"dawn" = "Amanecer";
+"morning" = "Mañana";
+"noon" = "Mediodía";
+"evening" = "Tarde";
+
+// MARK: - Difficulty
+"difficulty_beginner" = "Principiante";
+"difficulty_intermediate" = "Intermedio";
+"difficulty_expert" = "Experto";
+"difficulty_label" = "Dificultad";
+
+// MARK: - Labels
+"habitat_label" = "Hábitat";
+"description_label" = "Descripción";
+"recommended_baits" = "Cebos Recomendados";
+"interesting_facts" = "Datos Interesantes";
+"effectiveness_label" = "Efectividad";
+"category_label" = "Categoría";
+"duration_label" = "Duración";
+"progress_label" = "Progreso";
+
+// MARK: - Animal Facts
+"deer_fact_1" = "Los venados de cola blanca pueden correr hasta 48 km/h y saltar 2.4 metros de altura";
+"deer_fact_2" = "Tienen excelente audición y pueden detectar sonidos desde grandes distancias";
+"deer_fact_3" = "Durante el invierno, forman grupos llamados 'patios' para mejor supervivencia";
+
+"boar_fact_1" = "Los jabalíes tienen un excelente sentido del olfato, 7 veces mejor que los perros";
+"boar_fact_2" = "Son excelentes nadadores y pueden nadar largas distancias";
+"boar_fact_3" = "Los jabalíes son animales altamente inteligentes y sociales con jerarquías complejas";
+
+"turkey_fact_1" = "Los pavos silvestres pueden volar a velocidades de hasta 88 km/h por distancias cortas";
+"turkey_fact_2" = "Tienen excelente visión de colores y pueden ver movimiento desde grandes distancias";
+"turkey_fact_3" = "Los machos realizan elaboradas exhibiciones de cortejo llamadas 'pavonearse' durante la temporada de apareamiento";
+
+"bear_fact_1" = "Los osos negros tienen excelente memoria y pueden recordar fuentes de comida por años";
+"bear_fact_2" = "Pueden correr hasta 56 km/h a pesar de su tamaño y peso";
+"bear_fact_3" = "Los osos tienen uno de los mejores sentidos del olfato en el reino animal, 7 veces mejor que los sabuesos";
+
+// MARK: - Trails View
+"hunter_trails" = "Senderos del Cazador";
+"complete_practices" = "Completa prácticas de entrenamiento para desbloquear nuevos senderos";
+"practice_detail" = "Detalles de la Práctica";
+"instructions_label" = "Instrucciones";
+"tips_label" = "Consejos";
+"mark_completed" = "Marcar como Completado";
+
+// MARK: - Practice Names
+"practice_breathing" = "Control de Respiración";
+"practice_breathing_desc" = "Domina la respiración controlada para puntería estable y ruido reducido";
+
+"practice_silent_walking" = "Movimiento Silencioso";
+"practice_silent_walking_desc" = "Aprende a moverte por el terreno sin alertar a la vida silvestre";
+
+"practice_camouflage" = "Técnicas de Camuflaje";
+"practice_camouflage_desc" = "Perfecciona el arte de mezclarte con tu entorno";
+
+"practice_wind_reading" = "Lectura del Viento";
+"practice_wind_reading_desc" = "Comprende los patrones del viento y su efecto en la caza";
+
+"practice_tracking" = "Rastreo Básico";
+"practice_tracking_desc" = "Aprende a identificar y seguir huellas y señales de animales";
+
+"practice_patience" = "Entrenamiento de Paciencia";
+"practice_patience_desc" = "Desarrolla la disciplina mental requerida para una caza exitosa";
+
+"practice_equipment_check" = "Revisión de Equipo";
+"practice_equipment_check_desc" = "Aprende la inspección sistemática y mantenimiento del equipo";
+
+"practice_shooting_stance" = "Postura de Tiro";
+"practice_shooting_stance_desc" = "Perfecciona tu postura de tiro para precisión y estabilidad";
+
+"practice_weather_reading" = "Lectura del Clima";
+"practice_weather_reading_desc" = "Comprende cómo el clima afecta el comportamiento animal";
+
+"practice_advanced_tracking" = "Rastreo Avanzado";
+"practice_advanced_tracking_desc" = "Domina técnicas complejas de rastreo y patrones de comportamiento animal";
+
+// MARK: - Practice Categories
+"category_stealth" = "Sigilo";
+"category_tracking" = "Rastreo";
+"category_shooting" = "Tiro";
+"category_environment" = "Ambiente";
+"category_equipment" = "Equipo";
+"category_mental" = "Mental";
+
+// MARK: - Practice Instructions
+"breathing_instruction_1" = "Siéntate cómodamente con la espalda recta y los pies apoyados en el suelo";
+"breathing_instruction_2" = "Inhala lentamente por la nariz durante 4 tiempos, mantén durante 4 tiempos";
+"breathing_instruction_3" = "Exhala lentamente por la boca durante 6 tiempos, repite el ciclo";
+
+"breathing_tip_1" = "Practica esta técnica antes de cada sesión de caza para centrarte";
+"breathing_tip_2" = "Concéntrate en tu respiración para mantener la calma en momentos tensos";
+
+"walking_instruction_1" = "Camina talón-punta con cada paso, rodando el pie lentamente";
+"walking_instruction_2" = "Prueba cada paso antes de poner todo el peso para evitar ruido";
+"walking_instruction_3" = "Muévete lenta y deliberadamente, pausando entre pasos para escuchar";
+
+"walking_tip_1" = "Practica en diferentes tipos de terreno para entender cada superficie";
+"walking_tip_2" = "Evita pisar hojas secas, ramas y otros elementos ruidosos del suelo";
+
+"camouflage_instruction_1" = "Estudia tu entorno e identifica colores y patrones dominantes";
+"camouflage_instruction_2" = "Rompe tu silueta humana con materiales naturales";
+"camouflage_instruction_3" = "Muévete lentamente y evita movimientos bruscos que llamen la atención";
+
+"camouflage_tip_1" = "Los materiales naturales funcionan mejor que el camuflaje artificial";
+"camouflage_tip_2" = "Presta atención a las sombras y cómo afectan tu visibilidad";
+
+"wind_instruction_1" = "Usa polvo o residuos ligeros para probar la dirección del viento";
+"wind_instruction_2" = "Posiciónate a favor del viento desde tu área objetivo";
+"wind_instruction_3" = "Monitorea los cambios de viento durante tu sesión de caza";
+
+"wind_tip_1" = "Los patrones de viento cambian durante el día, verifica regularmente";
+"wind_tip_2" = "Usa las térmicas y vientos de valle a tu favor";
+
+"tracking_instruction_1" = "Busca huellas, excrementos, señales de alimentación y áreas de descanso";
+"tracking_instruction_2" = "Nota la edad de las señales por su frescura y condición";
+"tracking_instruction_3" = "Sigue la dirección del rastro y predice patrones de movimiento animal";
+
+"tracking_tip_1" = "La madrugada proporciona las mejores condiciones de rastreo";
+"tracking_tip_2" = "Busca vegetación rota y suelo perturbado";
+
+"patience_instruction_1" = "Encuentra una posición cómoda y establécete silenciosamente";
+"patience_instruction_2" = "Concéntrate en tu respiración y mantente mentalmente alerta";
+"patience_instruction_3" = "Observa tu entorno y espera el momento correcto";
+
+"patience_tip_1" = "La caza exitosa requiere horas de espera paciente";
+"patience_tip_2" = "Usa el tiempo de espera para estudiar patrones de comportamiento animal";
+
+"equipment_instruction_1" = "Revisa todo el equipo antes de salir de caza";
+"equipment_instruction_2" = "Asegúrate de que las armas estén limpias, funcionales y bien calibradas";
+"equipment_instruction_3" = "Verifica que tienes todas las licencias y permisos necesarios";
+
+"equipment_tip_1" = "Una lista de verificación de equipo previene olvidos esenciales";
+"equipment_tip_2" = "Limpia y mantén el equipo después de cada uso";
+
+"stance_instruction_1" = "Posiciona los pies al ancho de los hombros para una base estable";
+"stance_instruction_2" = "Inclínate ligeramente hacia adelante con el peso distribuido uniformemente";
+"stance_instruction_3" = "Mantén tu codo de tiro posicionado para puntería consistente";
+
+"stance_tip_1" = "Practica tu postura hasta que se vuelva memoria muscular";
+"stance_tip_2" = "Ajusta la postura según el terreno y posición de tiro";
+
+"weather_instruction_1" = "Verifica la presión barométrica y tendencias de temperatura";
+"weather_instruction_2" = "Observa patrones de nubes y cambios de dirección del viento";
+"weather_instruction_3" = "Comprende cómo el clima afecta el movimiento animal";
+
+"weather_tip_1" = "Los animales son más activos antes de frentes climáticos";
+"weather_tip_2" = "El clima lluvioso puede enmascarar tu olor y sonido";
+
+"advanced_tracking_instruction_1" = "Estudia patrones individuales de marcha y características animales";
+"advanced_tracking_instruction_2" = "Determina la edad de huellas por condiciones del sustrato y meteorización";
+"advanced_tracking_instruction_3" = "Predice el destino basado en terreno y recursos";
+
+"advanced_tracking_tip_1" = "Cada animal tiene patrones únicos de movimiento";
+"advanced_tracking_tip_2" = "Combina el rastreo con conocimiento del comportamiento animal";
+
+// MARK: - Animals Guide
+"animals_guide" = "Guía de Animales";
+"learn_about_animals" = "Aprende sobre animales y su comportamiento";
+"animal_details" = "Detalles del Animal";
+
+// MARK: - Bait Workshop
+"bait_workshop" = "Taller de Cebos";
+"craft_perfect_baits" = "Crea los cebos perfectos para tus cacerías";
+"search_baits" = "Buscar cebos...";
+"recipe_label" = "Receta";
+"ingredients_label" = "Ingredientes";
+"steps_label" = "Pasos";
+"duration_estimate" = "Tiempo Est.:";
+"seasonal_bonus" = "Bonificación Estacional";
+"bait_recipe" = "Receta de Cebo";
+
+// MARK: - Bait Categories
+"category_scent" = "Aroma";
+"category_food" = "Comida";
+"category_protein" = "Proteína";
+
+// MARK: - Effectiveness
+"effectiveness_poor" = "Pobre";
+"effectiveness_fair" = "Regular";
+"effectiveness_good" = "Buena";
+"effectiveness_excellent" = "Excelente";
+
+// MARK: - Baits
+"acorn_scent" = "Aroma de Bellota";
+"acorn_scent_description" = "Atrayente natural para venados usando bellotas frescas y esencia de vainilla";
+
+"apple_scent" = "Aroma de Manzana";
+"apple_scent_description" = "Aroma dulce de fruta efectivo para varios animales de caza";
+
+"corn_bait" = "Cebo de Maíz";
+"corn_bait_description" = "Cebo alimentario alto en energía perfecto para venados y jabalíes";
+
+"root_scent" = "Aroma de Raíz";
+"root_scent_description" = "Aroma terroso que atrae animales que buscan alimento como el jabalí";
+
+"fruit_mix" = "Mezcla de Frutas";
+"fruit_mix_description" = "Cebo de frutas mixtas efectivo para animales omnívoros";
+
+"seed_mix" = "Mezcla de Semillas";
+"seed_mix_description" = "Mezcla nutritiva de semillas atractiva para aves y caza menor";
+
+"berry_scent" = "Aroma de Baya";
+"berry_scent_description" = "Aroma dulce de bayas irresistible para muchos animales del bosque";
+
+"insect_lure" = "Señuelo de Insectos";
+"insect_lure_description" = "Señuelo rico en proteínas efectivo para aves y caza menor";
+
+"honey_scent" = "Aroma de Miel";
+"honey_scent_description" = "Aroma dulce de miel efectivo para osos y otros omnívoros";
+
+"fish_lure" = "Señuelo de Pescado";
+"fish_lure_description" = "Aroma a pescado que atrae osos y otros depredadores";
+
+"berries_mix" = "Mezcla de Bayas";
+"berries_mix_description" = "Mezcla fresca de bayas perfecta para atraer animales omnívoros";
+
+// MARK: - Ingredients
+"fresh_acorns" = "Bellotas Frescas";
+"vanilla_extract" = "Extracto de Vainilla";
+"mineral_oil" = "Aceite Mineral";
+"fresh_apples" = "Manzanas Frescas";
+"apple_extract" = "Extracto de Manzana";
+"carrier_oil" = "Aceite Portador";
+"whole_corn" = "Maíz Entero";
+"molasses" = "Melaza";
+"salt" = "Sal";
+"wild_tubers" = "Tubérculos Silvestres";
+"earth_scent" = "Aroma de Tierra";
+"fixative" = "Fijador";
+"mixed_berries" = "Bayas Mixtas";
+"fruit_juice" = "Jugo de Fruta";
+"preservative" = "Conservante";
+"sunflower_seeds" = "Semillas de Girasol";
+"millet" = "Mijo";
+"cracked_corn" = "Maíz Triturado";
+"wild_berries" = "Bayas Silvestres";
+"berry_extract" = "Extracto de Baya";
+"alcohol_base" = "Base de Alcohol";
+"dried_crickets" = "Grillos Secos";
+"protein_powder" = "Polvo de Proteína";
+"attractant" = "Atrayente";
+"raw_honey" = "Miel Cruda";
+"beeswax" = "Cera de Abeja";
+"fish_oil" = "Aceite de Pescado";
+"fish_meal" = "Harina de Pescado";
+"stabilizer" = "Estabilizador";
+"sugar" = "Azúcar";
+"natural_preservative" = "Conservante Natural";
+
+// MARK: - Recipe Steps
+"acorn_recipe_step_1" = "Tritura las bellotas frescas en pedazos gruesos, removiendo cualquier cáscara";
+"acorn_recipe_step_2" = "Mezcla las bellotas trituradas con extracto de vainilla y aceite mineral";
+"acorn_recipe_step_3" = "Deja reposar la mezcla durante 2 horas antes de usar para mezclar aromas";
+
+"apple_recipe_step_1" = "Quita el corazón y corta las manzanas frescas en pedazos pequeños";
+"apple_recipe_step_2" = "Mezcla con extracto de manzana y aceite portador";
+"apple_recipe_step_3" = "Permite que fermente ligeramente para aroma realzado";
+
+"corn_recipe_step_1" = "Remoja el maíz entero en agua durante 30 minutos";
+"corn_recipe_step_2" = "Mezcla con melaza y sal para realzar el sabor";
+"corn_recipe_step_3" = "Extiende la mezcla en el área de caza antes del amanecer";
+
+"root_recipe_step_1" = "Limpia y corta los tubérculos silvestres en pedazos pequeños";
+"root_recipe_step_2" = "Mezcla con base de aroma de tierra y fijador";
+"root_recipe_step_3" = "Permite que la mezcla cure durante 3 horas para aroma óptimo";
+
+"fruit_recipe_step_1" = "Machaca las bayas mixtas para liberar jugos naturales";
+"fruit_recipe_step_2" = "Añade jugo de fruta y conservante natural";
+"fruit_recipe_step_3" = "Mezcla completamente y deja reposar durante 1 hora";
+
+"seed_recipe_step_1" = "Mezcla semillas de girasol, mijo y maíz triturado";
+"seed_recipe_step_2" = "Tuesta ligeramente la mezcla para realzar el aroma";
+"seed_recipe_step_3" = "Almacena en contenedor hermético hasta su uso";
+
+"berry_recipe_step_1" = "Tritura las bayas silvestres para extraer máximo aroma";
+"berry_recipe_step_2" = "Mezcla con extracto de baya y base de alcohol";
+"berry_recipe_step_3" = "Deja que la mezcla madure durante 2 horas antes de aplicar";
+
+"insect_recipe_step_1" = "Muele los grillos secos hasta obtener polvo fino";
+"insect_recipe_step_2" = "Mezcla con polvo de proteína y atrayente";
+"insect_recipe_step_3" = "Forma pequeñas bolas para fácil colocación";
+
+"honey_recipe_step_1" = "Calienta la miel cruda hasta consistencia líquida";
+"honey_recipe_step_2" = "Mezcla con cera de abeja derretida y aceite portador";
+"honey_recipe_step_3" = "Enfría la mezcla hasta semi-sólida antes de usar";
+
+"fish_recipe_step_1" = "Combina aceite de pescado con harina de pescado";
+"fish_recipe_step_2" = "Añade estabilizador para prevenir deterioro";
+"fish_recipe_step_3" = "Mezcla bien y aplica al área de caza";
+
+"berries_recipe_step_1" = "Selecciona bayas frescas y maduras para máximo atractivo";
+"berries_recipe_step_2" = "Mezcla con azúcar y conservante natural";
+"berries_recipe_step_3" = "Deja que la mezcla fermente durante 2 horas para aroma realzado";
+
+// MARK: - Profile
+"hunter_title" = "Cazador";
+"days_active" = "Días Activo";
+"practices_completed" = "Prácticas\nCompletadas";
+"achievements" = "Logros";
+"settings" = "Configuración";
+"hunting_log" = "Registro de Caza";
+"share_app" = "Compartir App";
+"app_version" = "Versión 1.0.0";
+
+// MARK: - Achievements
+"achievement_first_steps" = "Primeros Pasos";
+"achievement_first_steps_desc" = "¡Bienvenido a Hunter Companion! Tu viaje comienza ahora.";
+
+"achievement_dedicated_hunter" = "Cazador Dedicado";
+"achievement_dedicated_hunter_desc" = "Usa la app durante 7 días consecutivos";
+
+"achievement_practice_makes_perfect" = "La Práctica Hace al Maestro";
+"achievement_practice_makes_perfect_desc" = "Completa 5 prácticas de caza exitosamente";
+
+"achievement_master_tracker" = "Rastreador Maestro";
+"achievement_master_tracker_desc" = "Completa 10 prácticas de caza exitosamente";
+
+"achievement_veteran_hunter" = "Cazador Veterano";
+"achievement_veteran_hunter_desc" = "Usa la app durante 30 días - ¡verdadera dedicación!";
+
+"achievement_bait_master" = "Maestro de Cebos";
+"achievement_bait_master_desc" = "Explora el taller de cebos durante 2 semanas";
+
+// MARK: - Achievement Categories
+"category_beginner" = "Principiante";
+"category_skill" = "Habilidad";
+"category_dedication" = "Dedicación";
+"category_knowledge" = "Conocimiento";
+
+"track_your_progress" = "Rastrea tu viaje de caza y logros";
+"unlocked_label" = "Desbloqueado";
+"completed" = "Completado";
+
+// MARK: - Settings
+"profile_settings" = "Perfil";
+"appearance_settings" = "Apariencia";
+"language_settings" = "Idioma";
+"about_app" = "Acerca de";
+
+"hunter_name" = "Nombre del Cazador";
+"enter_name" = "Ingresa nombre";
+"app_theme" = "Tema";
+"app_language" = "Idioma";
+"developer" = "Desarrollador";
+
+"theme_nature" = "Naturaleza";
+"theme_autumn" = "Otoño";
+"theme_winter" = "Invierno";
+
+"select_language" = "Seleccionar Idioma";
