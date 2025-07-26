@@ -66,9 +66,6 @@ struct TrailsView: View {
     }
 }
 
-
-
-
 // MARK: - Trails Manager
 class TrailsManager: ObservableObject {
     @Published var completedPracticeIds: Set<UUID> = []
@@ -164,11 +161,11 @@ struct TrailPointView: View {
                     }
                     
                     VStack(spacing: 4) {
-                    Text(LocalizedStringKey(practice.name))
-                        .font(.caption)
-                        .fontWeight(.semibold)
-                        .foregroundColor(isUnlocked ? .primary : .gray)
-                        .multilineTextAlignment(.center)
+                        Text(LocalizedStringKey(practice.name))
+                            .font(.caption)
+                            .fontWeight(.semibold)
+                            .foregroundColor(isUnlocked ? .primary : .gray)
+                            .multilineTextAlignment(.center)
                         
                         if isUnlocked {
                             HStack(spacing: 2) {
@@ -611,7 +608,7 @@ struct BaitCard: View {
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
                 
-                Text(bait.description)
+                Text(LocalizedStringKey(bait.description))
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .lineLimit(2)
@@ -639,61 +636,61 @@ struct BaitDetailView: View {
                             .font(.title)
                             .fontWeight(.bold)
 
-                    Text(LocalizedStringKey(bait.description))
-                        .font(.body)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
+                        Text(LocalizedStringKey(bait.description))
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
 
-                    HStack(spacing: 2) {
-                        ForEach(0..<4) { index in
-                            Image(systemName: index < bait.effectiveness ? "star.fill" : "star")
-                                .foregroundColor(.yellow)
+                        HStack(spacing: 2) {
+                            ForEach(0..<4) { index in
+                                Image(systemName: index < bait.effectiveness ? "star.fill" : "star")
+                                    .foregroundColor(.yellow)
+                            }
                         }
                     }
-                }
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
 
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("ingredients_label")
-                        .font(.headline)
-                        .fontWeight(.bold)
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("ingredients_label")
+                            .font(.headline)
+                            .fontWeight(.bold)
 
-                    ForEach(bait.ingredients, id: \.self) { ingredient in
-                        Text(LocalizedStringKey(ingredient))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-
-                    Text("steps_label")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(.top)
-
-                    ForEach(Array(bait.steps.enumerated()), id: \.offset) { index, step in
-                        HStack(alignment: .top, spacing: 8) {
-                            Text("\(index + 1).")
-                                .fontWeight(.bold)
-                            Text(LocalizedStringKey(step))
+                        ForEach(bait.ingredients, id: \.self) { ingredient in
+                            Text(LocalizedStringKey(ingredient))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
+
+                        Text("steps_label")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .padding(.top)
+
+                        ForEach(Array(bait.steps.enumerated()), id: \.offset) { index, step in
+                            HStack(alignment: .top, spacing: 8) {
+                                Text("\(index + 1).")
+                                    .fontWeight(.bold)
+                                Text(LocalizedStringKey(step))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                        }
                     }
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+
+                    Spacer(minLength: 20)
                 }
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
-
-                Spacer(minLength: 20)
             }
-            .padding()
-        }
-        .navigationTitle("bait_recipe")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button("close") { dismiss() }
+            .navigationTitle("bait_recipe")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("close") { dismiss() }
+                }
             }
         }
     }
-}
 }
 
 // MARK: - Profile View

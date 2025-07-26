@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var settingsManager: SettingsManager
+    @Environment(\.colorSchemeContrast) var systemContrast
     @State private var selectedTab = 0
     @State private var showOnboarding = !UserDefaults.standard.bool(forKey: "has_seen_onboarding")
 
@@ -45,7 +46,6 @@ struct ContentView: View {
         }
         .accentColor(settingsManager.selectedTheme.primaryColor)
         .dynamicTypeSize(settingsManager.largeTextEnabled ? .accessibility3 : .large)
-        .accessibilityContrastCompat(settingsManager.highContrastEnabled ? AccessibilityContrast.increased : .normal)
         .sheet(isPresented: $showOnboarding) {
             OnboardingView(show: $showOnboarding)
                 .environmentObject(settingsManager)

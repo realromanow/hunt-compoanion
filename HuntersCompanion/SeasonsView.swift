@@ -91,7 +91,7 @@ struct ActivityCircleView: View {
                     .font(.system(size: 60))
                     .scaleEffect(1 + sin(animationProgress * 2 * .pi) * 0.1)
                 
-                Text(animal.name)
+                Text(LocalizedStringKey(animal.name))
                     .font(.headline)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
@@ -181,7 +181,7 @@ struct AnimalInfoCard: View {
                 .font(.headline)
                 .fontWeight(.semibold)
             
-            Text(animal.habitat)
+            Text(LocalizedStringKey(animal.habitat))
                 .font(.body)
                 .foregroundColor(.secondary)
             
@@ -189,7 +189,7 @@ struct AnimalInfoCard: View {
                 .font(.headline)
                 .fontWeight(.semibold)
             
-            Text(animal.description)
+            Text(LocalizedStringKey(animal.description))
                 .font(.body)
                 .foregroundColor(.secondary)
         }
@@ -286,7 +286,7 @@ struct AnimalSelectionCard: View {
                 Text(animal.icon)
                     .font(.system(size: 50))
                 
-                Text(animal.name)
+                Text(LocalizedStringKey(animal.name))
                     .font(.headline)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
