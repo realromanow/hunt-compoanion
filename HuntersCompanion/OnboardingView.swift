@@ -23,7 +23,8 @@ struct OnboardingView: View {
             .accessibilityLabel(Text("sign_in_with_apple"))
 
             Button("get_started") {
-                UserDefaults.standard.set(true, forKey: "has_seen_onboarding")
+                settingsManager.hasSeenOnboarding = true
+                settingsManager.saveSettings()
                 show = false
             }
             .padding()
