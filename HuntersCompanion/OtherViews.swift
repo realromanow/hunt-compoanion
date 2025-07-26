@@ -1,5 +1,6 @@
 // OtherViews.swift
 import SwiftUI
+import AuthenticationServices
 
 // MARK: - Trails View
 struct TrailsView: View {
@@ -622,23 +623,24 @@ struct BaitCard: View {
 struct BaitDetailView: View {
     let bait: Bait
     @Environment(\.dismiss) private var dismiss
-    
+
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
-                VStack(spacing: 16) {
-                    Text(bait.icon)
-                        .font(.system(size: 80))
-                    
-                    Text(bait.name)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    
-                    Text(bait.description)
+            ScrollView {
+                VStack(spacing: 20) {
+                    VStack(spacing: 16) {
+                        Text(bait.icon)
+                            .font(.system(size: 80))
+
+                        Text(bait.name)
+                            .font(.title)
+                            .fontWeight(.bold)
+
+                    Text(LocalizedStringKey(bait.description))
                         .font(.body)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
-                    
+
                     HStack(spacing: 2) {
                         ForEach(0..<4) { index in
                             Image(systemName: index < bait.effectiveness ? "star.fill" : "star")
@@ -648,16 +650,43 @@ struct BaitDetailView: View {
                 }
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
-                
-                Spacer()
+
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("ingredients_label")
+                        .font(.headline)
+                        .fontWeight(.bold)
+
+                    ForEach(bait.ingredients, id: \.self) { ingredient in
+                        Text(LocalizedStringKey(ingredient))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+
+                    Text("steps_label")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .padding(.top)
+
+                    ForEach(Array(bait.steps.enumerated()), id: \.offset) { index, step in
+                        HStack(alignment: .top, spacing: 8) {
+                            Text("\(index + 1).")
+                                .fontWeight(.bold)
+                            Text(LocalizedStringKey(step))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                    }
+                }
+                .padding()
+                .background(RoundedRectangle(cornerRadius: 16).fill(.ultraThinMaterial))
+
+                Spacer(minLength: 20)
             }
             .padding()
-            .navigationTitle("bait_recipe")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("close") { dismiss() }
-                }
+        }
+        .navigationTitle("bait_recipe")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("close") { dismiss() }
             }
         }
     }
@@ -667,6 +696,7 @@ struct BaitDetailView: View {
 struct ProfileView: View {
     @EnvironmentObject var settingsManager: SettingsManager
     @State private var showingSettings = false
+    @State private var signedIn = false
     
     var body: some View {
         NavigationStack {
@@ -701,6 +731,17 @@ struct ProfileView: View {
                         .background(RoundedRectangle(cornerRadius: 12).fill(.ultraThinMaterial))
                     }
                     .buttonStyle(PlainButtonStyle())
+
+                    if !signedIn {
+                        SignInWithAppleButton(.signIn) { request in
+                            request.requestedScopes = [.fullName, .email]
+                        } onCompletion: { result in
+                            if case .success = result { signedIn = true }
+                        }
+                        .signInWithAppleButtonStyle(.black)
+                        .frame(height: 45)
+                        .accessibilityLabel(Text("sign_in_with_apple"))
+                    }
                 }
                 
                 Spacer()
@@ -740,6 +781,11 @@ struct SettingsView: View {
                             Text(language.localizedName).tag(language)
                         }
                     }
+                }
+
+                Section("accessibility_settings") {
+                    Toggle("large_text", isOn: $settingsManager.largeTextEnabled)
+                    Toggle("high_contrast", isOn: $settingsManager.highContrastEnabled)
                 }
                 
                 Section("about_app") {

@@ -413,3 +413,13 @@
 "select_language" = "Seleccionar Idioma";
 "language_en" = "Inglés";
 "language_es" = "Español";
+
+// MARK: - Onboarding & Accessibility
+"onboarding_discover" = "Descubre las mejores temporadas y senderos.";
+"onboarding_workshop" = "Crea cebos con recetas detalladas.";
+"onboarding_accessibility" = "Pensado para la accesibilidad.";
+"get_started" = "Comenzar";
+"sign_in_with_apple" = "Iniciar sesión con Apple";
+"accessibility_settings" = "Accesibilidad";
+"large_text" = "Texto Grande";
+"high_contrast" = "Alto Contraste";

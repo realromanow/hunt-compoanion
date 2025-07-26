@@ -413,3 +413,13 @@
 "select_language" = "Select Language";
 "language_en" = "English";
 "language_es" = "Spanish";
+
+// MARK: - Onboarding & Accessibility
+"onboarding_discover" = "Discover the best seasons and trails.";
+"onboarding_workshop" = "Craft baits with detailed recipes.";
+"onboarding_accessibility" = "Built with accessibility in mind.";
+"get_started" = "Get Started";
+"sign_in_with_apple" = "Sign in with Apple";
+"accessibility_settings" = "Accessibility";
+"large_text" = "Large Text";
+"high_contrast" = "High Contrast";

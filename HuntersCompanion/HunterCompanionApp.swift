@@ -18,6 +18,8 @@ struct HunterCompanionApp: App {
 class SettingsManager: ObservableObject {
     @Published var currentLanguage: AppLanguage = .en
     @Published var selectedTheme: AppTheme = .nature
+    @Published var largeTextEnabled: Bool = false
+    @Published var highContrastEnabled: Bool = false
     
     init() {
         loadSettings()
@@ -34,11 +36,15 @@ class SettingsManager: ObservableObject {
            let theme = AppTheme(rawValue: themeRaw) {
             selectedTheme = theme
         }
+        largeTextEnabled = UserDefaults.standard.bool(forKey: "large_text")
+        highContrastEnabled = UserDefaults.standard.bool(forKey: "high_contrast")
     }
     
     func saveSettings() {
         UserDefaults.standard.set(currentLanguage.rawValue, forKey: "app_language")
         UserDefaults.standard.set(selectedTheme.rawValue, forKey: "app_theme")
+        UserDefaults.standard.set(largeTextEnabled, forKey: "large_text")
+        UserDefaults.standard.set(highContrastEnabled, forKey: "high_contrast")
     }
 }
 

@@ -301,7 +301,7 @@ enum PracticeCategory: String, CaseIterable {
     }
 }
 
-// MARK: - Bait Model (Simplified)
+// MARK: - Bait Model
 struct Bait: Identifiable {
     let id = UUID()
     let name: String
@@ -309,13 +309,55 @@ struct Bait: Identifiable {
     let description: String
     let category: BaitCategory
     let effectiveness: Int // 1-4 stars
-    
+    let ingredients: [String]
+    let steps: [String]
+
     static let allBaits: [Bait] = [
-        Bait(name: "Acorn Scent", icon: "🌰", description: "Natural deer attractant", category: .scent, effectiveness: 4),
-        Bait(name: "Apple Scent", icon: "🍎", description: "Sweet fruit scent", category: .scent, effectiveness: 3),
-        Bait(name: "Corn Bait", icon: "🌽", description: "High-energy food bait", category: .food, effectiveness: 4),
-        Bait(name: "Honey Scent", icon: "🍯", description: "Sweet honey scent", category: .scent, effectiveness: 4),
-        Bait(name: "Berries Mix", icon: "🫐", description: "Fresh berry mix", category: .food, effectiveness: 3)
+        Bait(
+            name: "Acorn Scent",
+            icon: "🌰",
+            description: "acorn_scent_description",
+            category: .scent,
+            effectiveness: 4,
+            ingredients: ["fresh_acorns", "vanilla_extract", "mineral_oil"],
+            steps: ["acorn_recipe_step_1", "acorn_recipe_step_2", "acorn_recipe_step_3"]
+        ),
+        Bait(
+            name: "Apple Scent",
+            icon: "🍎",
+            description: "apple_scent_description",
+            category: .scent,
+            effectiveness: 3,
+            ingredients: ["fresh_apples", "apple_extract", "carrier_oil"],
+            steps: ["apple_recipe_step_1", "apple_recipe_step_2", "apple_recipe_step_3"]
+        ),
+        Bait(
+            name: "Corn Bait",
+            icon: "🌽",
+            description: "corn_bait_description",
+            category: .food,
+            effectiveness: 4,
+            ingredients: ["whole_corn", "molasses", "salt"],
+            steps: ["corn_recipe_step_1", "corn_recipe_step_2", "corn_recipe_step_3"]
+        ),
+        Bait(
+            name: "Honey Scent",
+            icon: "🍯",
+            description: "honey_scent_description",
+            category: .scent,
+            effectiveness: 4,
+            ingredients: ["raw_honey", "beeswax", "carrier_oil"],
+            steps: ["honey_recipe_step_1", "honey_recipe_step_2", "honey_recipe_step_3"]
+        ),
+        Bait(
+            name: "Berries Mix",
+            icon: "🫐",
+            description: "berries_mix_description",
+            category: .food,
+            effectiveness: 3,
+            ingredients: ["wild_berries", "sugar", "natural_preservative"],
+            steps: ["berries_recipe_step_1", "berries_recipe_step_2", "berries_recipe_step_3"]
+        )
     ]
 }
 
